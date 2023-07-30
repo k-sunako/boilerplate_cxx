@@ -28,7 +28,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17)
 
 target_compile_options(${PROJECT_NAME} PUBLIC "$<$<COMPILE_LANG_AND_ID:CXX,MSVC>:/permissive->")
 
-target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt gtest gtest_main gmock Foo::Foo)
+target_link_libraries(${PROJECT_NAME} PRIVATE gtest gtest_main gmock Foo::Foo)
 
 target_include_directories(
   ${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
