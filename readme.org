@@ -1,0 +1,14 @@
+
+* コマンド
+** ライブラリをコンパイル
+#+begin_src bash
+  cmake -S . --build build
+  cmake --build build
+#+end_src
+
+** テストをコンパイル/実行
+#+begin_src bash
+  cmake -S test/ --build build/test
+  cmake --build build/test
+  CTEST_OUTPUT_ON_FAILURE=1 cmake --build build/test --target test
+#+end_src
