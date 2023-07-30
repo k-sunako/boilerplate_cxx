@@ -1,0 +1,4 @@
+bool test()
+{
+  return true;
+}
