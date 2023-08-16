@@ -2,13 +2,33 @@
 * コマンド
 ** ライブラリをコンパイル
 #+begin_src bash
-  cmake -S . --build build
+  cmake -S . -B build
   cmake --build build
 #+end_src
 
 ** テストをコンパイル/実行
 #+begin_src bash
-  cmake -S test/ --build build/test
+  cmake -S test/ -B build/test
   cmake --build build/test
   CTEST_OUTPUT_ON_FAILURE=1 cmake --build build/test --target test
+#+end_src
+
+** GUI をコンパイル/実行
+glfw パッケージの導入が必要.
+
+Manjaro Linux では下記コマンドで導入した。
+
+#+begin_src bash
+  pacman -Syu glfw-wayland
+#+end_src
+
+#+begin_src bash
+  cmake -S test/ -B build/gui
+  cmake --build build/gui
+#+end_src
+
+gui は下記コマンドで実行する.
+
+#+begin_src bash
+  ./build/gui/Foo_gui
 #+end_src
