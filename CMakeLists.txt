@@ -6,6 +6,8 @@ project(
   LANGUAGES CXX
 )
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 include(cmake/CPM.cmake)
 
 CPMAddPackage("gh:TheLartians/PackageProject.cmake@1.8.0")
